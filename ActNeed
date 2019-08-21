@@ -6,3 +6,8 @@ var bold_re = new RegExp(/(<p style="font-weight: bold;">)(.*?)(<\/p>)/gm);
 var bold_1 = '<b>';
 var bold_2 = '</b>';
 var result = a.replace(bold_re,bold_1+"$2"+bold_2).replace(/<p><\/p>/gm,"");
+
+#html中不同标签能实现相同的效果
+#<strong>和<i>优先于<b>和<i> 前者是是基于内容的样式,被html是设置为强调  后者是基于物理的样式
+粗体  <strong><b> <p style="font-style:bold">
+斜体  <em> <i> <p style="font-style:italic">
