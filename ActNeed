@@ -1,0 +1,8 @@
+不定时更新点小知识
+
+#实现将p标签style属性进行加粗的内容  换成用<b>标签进行加粗
+#js中使用$1,$2这种形式来表示占位  按顺序对应正则中( )中的内容
+var bold_re = new RegExp(/(<p style="font-weight: bold;">)(.*?)(<\/p>)/gm);
+var bold_1 = '<b>';
+var bold_2 = '</b>';
+var result = a.replace(bold_re,bold_1+"$2"+bold_2).replace(/<p><\/p>/gm,"");
