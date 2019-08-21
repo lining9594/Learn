@@ -13,3 +13,5 @@ var result = a.replace(bold_re,bold_1+"$2"+bold_2).replace(/<p><\/p>/gm,"");
 斜体  <em> <i> <p style="font-style:italic">
 
 #寻找js/jq渲染出的子节点 需要从一个html中存在的父节点为起点
+#对于HTML元素本身就带有的固有属性 使用prop方法,对于HTML元素我们自己自定义的DOM属性 使用attr方法
+#attr获取的值为undefine 可试用prop获取,像checkbox,radio,select，选中属性对应“checked”和“selected”，使用prop方法去操作才能获得正确的结果
